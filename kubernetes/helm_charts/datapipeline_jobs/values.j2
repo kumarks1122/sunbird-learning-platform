@@ -139,6 +139,7 @@ video-stream-generator:
     }
     task {
       window.shards = {{ activity_agg_window_shards }}
+      window.time = 60
       consumer.parallelism = {{ activity_agg_consumer_parallelism }}
       activity.agg.parallelism = {{ activity_agg_parallelism }}
     }
