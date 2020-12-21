@@ -143,6 +143,12 @@ video-stream-generator:
       consumer.parallelism = {{ activity_agg_consumer_parallelism }}
       activity.agg.parallelism = {{ activity_agg_parallelism }}
     }
+    redis {
+      database {
+        relationCache.id = 10
+        collectionCache.id = 5
+      }
+    }
     lms-cassandra {
       keyspace = "{{ env_name }}platform_db"
       table = "job_request"
